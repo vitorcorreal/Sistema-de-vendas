@@ -1,0 +1,65 @@
+body{
+    min-height: 100vh;
+    display:grid;
+    grid-template-rows: 70px 1fr;
+    grid-template-columns: 200px 600px 1fr;
+    grid-template-areas: 
+    'deco deco deco'
+    'menus venda hist';
+    margin: 0;
+}
+.menu{
+    position: relative;
+    border-right: solid 2px rgb(36, 36, 36);
+    display: flex;
+    flex-direction: column;
+    grid-area: menus;
+    background-color: rgb(26, 25, 25);   
+}
+
+.menu a{
+    font-size: 20px;
+    padding: 15px;
+    margin-bottom: 2px;
+    text-decoration: none;
+    color: rgb(209, 205, 205);
+    transition: background 0.3s;
+}
+.menu a:hover{
+    background-color: rgb(49, 49, 49);
+}
+.vendas{
+    position: relative;
+    padding: 10px;
+    display: grid;
+    background-color: rgb(39, 39, 59);
+    grid-area: venda;
+}
+.vendas div{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    align-items: center;
+    color: white;
+    border-radius: 40px;
+    background-color: rgb(18, 18, 26);
+    transition: box-shadow 0.2s;
+}
+.vendas input{
+    margin-right: 20px;
+    height: 20px;
+}
+.vendas div:hover{
+    box-shadow: 2px 2px 2px black;
+}
+.vendas div h1{
+    margin-left: 20px;
+}
+.hist{
+    
+    grid-area: hist;
+}
+.deco{
+    background-color: black;
+    grid-area: deco;
+}

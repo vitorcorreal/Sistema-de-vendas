@@ -129,8 +129,12 @@ vender(cenoura, 0.5)
 vender(abobora, 0.8)
 vender(maca, 0.32)
 vender(laranja, 3)
-cancelar(laranja)
+concluir(15)
+
+vender(batata, 0.1)
+vender(tomate, 0.3)
 concluir()
+
 
 
 
