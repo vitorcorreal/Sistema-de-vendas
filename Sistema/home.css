@@ -65,6 +65,9 @@ body{
 .hist div{
     border: solid 2px;
 }
+.comandos{
+    background-color: rgb(131, 130, 130);
+}
 .historico{
     display: flex;
     flex-direction: column;
