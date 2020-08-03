@@ -69,7 +69,21 @@ body{
     display: flex;
     flex-direction: column;
 }
-
+.historico table{
+    font-size: 20px;
+    border-collapse: collapse;
+}
+.historico th,td{
+    padding: 5px;
+    text-align: center;
+}
+.historico thead{
+    transition: background 0.3s;
+    border-bottom: solid 3px black;
+}
+.historico tr:hover{
+    background-color: rgb(200, 200, 200);
+}
 .deco{
     background-color: black;
     grid-area: deco;
