@@ -56,9 +56,20 @@ body{
     margin-left: 20px;
 }
 .hist{
-    
+    background-color: rgb(177, 174, 174);
     grid-area: hist;
+    display: grid;
+    grid-template-rows: 70px 1fr;
+
 }
+.hist div{
+    border: solid 2px;
+}
+.historico{
+    display: flex;
+    flex-direction: column;
+}
+
 .deco{
     background-color: black;
     grid-area: deco;
