@@ -22,8 +22,9 @@ function alterarCodigo(produto, novoCodigo){
 var totalPreco = 0
 var totalItens = 0
 
-function vender(produto, peso){
-    const preco = produto.preco*peso
+function vender(produto = 0, peso){
+    produt = produto.codigo
+    const preco = produt.preco*peso
     console.log(produto.nome, `${peso}kg: R$${preco.toFixed(2)}`)
     totalPreco += preco
     totalItens += 1
@@ -125,15 +126,20 @@ const maca = {
 const produtos = [tomate, batata, cenoura, abobora, abobrinha, inhame, batata_doce, 
 laranja, maca, ovo, melao]
 
-vender(cenoura, 0.5)
-vender(abobora, 0.8)
-vender(maca, 0.32)
-vender(laranja, 3)
-concluir(15)
+// DOM...
 
-vender(batata, 0.1)
-vender(tomate, 0.3)
-concluir()
+
+const prod = document.getElementById('produto').value
+const pr = Number(prod)
+const peso = document.getElementById('peso').value
+const p = Number(peso)
+const conclui = document.getElementById('concluir')
+conclui.onclick = function() {
+    vender(pr, p)
+    concluir()
+    console.log(`Você comprou ${p}kg de ${pr}`)
+}
+
 
 
 
