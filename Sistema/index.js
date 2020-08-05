@@ -25,7 +25,7 @@ var totalItens = 0
 function vender(codigo, peso){
     for(produto of produtos){
         if(produto.codigo == codigo){
-            const preco = produt.preco*peso
+            const preco = produto.preco*peso
             console.log(produto.nome, `${peso}kg: R$${preco.toFixed(2)}`)
             totalPreco += preco
             totalItens += 1
@@ -132,8 +132,11 @@ const produtos = [tomate, batata, cenoura, abobora, abobrinha, inhame, batata_do
 laranja, maca, ovo, melao]
 
 // DOM...
+vender(001, 2)
+concluir()
 
 
+/*
 const prod = document.getElementById('produto').value
 const pr = Number(prod)
 const peso = document.getElementById('peso').value
@@ -144,7 +147,9 @@ conclui.onclick = function() {
     concluir()
     console.log(`Você comprou ${p}kg de ${pr}`)
 }
+*/
 
+ 
 
 
 
