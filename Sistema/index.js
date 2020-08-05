@@ -22,14 +22,19 @@ function alterarCodigo(produto, novoCodigo){
 var totalPreco = 0
 var totalItens = 0
 
-function vender(produto = 0, peso){
-    produt = produto.codigo
-    const preco = produt.preco*peso
-    console.log(produto.nome, `${peso}kg: R$${preco.toFixed(2)}`)
-    totalPreco += preco
-    totalItens += 1
-    console.log(`Total de itens: ${totalItens}`)
-    console.log(`Total a pagar: R$${totalPreco.toFixed(2)}`)
+function vender(codigo, peso){
+    for(produto of produtos){
+        if(produto.codigo == codigo){
+            const preco = produt.preco*peso
+            console.log(produto.nome, `${peso}kg: R$${preco.toFixed(2)}`)
+            totalPreco += preco
+            totalItens += 1
+            console.log(`Total de itens: ${totalItens}`)
+            console.log(`Total a pagar: R$${totalPreco.toFixed(2)}`)
+        } else{
+            console.log('Produto não encontrado')
+        }
+    } 
 // Usando regra de 3, multiplicamos o preço do kg do produto pelo seu peso em kg
 }
 
