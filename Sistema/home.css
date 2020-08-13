@@ -2,7 +2,7 @@ body{
     min-height: 100vh;
     display:grid;
     grid-template-rows: 70px 1fr;
-    grid-template-columns: 200px 600px 1fr;
+    grid-template-columns: 200px 750px 1fr;
     grid-template-areas: 
     'deco deco deco'
     'menus venda hist';
@@ -30,44 +30,53 @@ body{
 }
 .vendas{
     position: relative;
-    padding: 10px;
+    text-align: center;
     display: grid;
     background-color: rgb(39, 39, 59);
     grid-area: venda;
+    
+}
+.vendas h2{
+    margin: 0;
+    font-size: 35px;
 }
 .vendas div{
     display: flex;
-    justify-content: space-between;
-    margin: 5px;
-    align-items: center;
+    flex-direction: column;
     color: white;
-    border-radius: 40px;
     background-color: rgb(18, 18, 26);
-    transition: box-shadow 0.2s;
+    overflow-x: scroll;
 }
-.vendas input{
-    margin-right: 20px;
-    height: 20px;
+.img {
+    
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    
+    justify-content: flex-start;
+    align-items: center;
+    
 }
-.vendas div:hover{
-    box-shadow: 2px 2px 2px black;
+.img img {
+    padding: 10px;
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
-.vendas div h1{
-    margin-left: 20px;
-}
+
 .hist{
-    background-color: rgb(177, 174, 174);
+    background-color: rgb(223, 219, 219);
     grid-area: hist;
     display: grid;
-    grid-template-rows: 70px 1fr;
+    grid-template-rows: 1fr;
 
 }
 .hist div{
     border: solid 2px;
 }
-.comandos{
-    background-color: rgb(131, 130, 130);
-}
+
 .historico{
     display: flex;
     flex-direction: column;
